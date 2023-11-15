@@ -25,4 +25,18 @@ public class CocktailsController : ControllerBase
         var result = await dbContext.Drinks.Where(d => d.Id == id).Include(d => d.Ingredients).ThenInclude(ingredient => ingredient.Ingredient).FirstAsync();
         return  result;
     }
+
+    [HttpGet]
+    public IActionResult GetCocktailsByName([FromQuery] string name)
+    {
+        DrinksDbContext dbContext = new DrinksDbContext(configuration:Configuration);
+
+        var results = dbContext.Drinks.Where(d => d.Name.ToLower().StartsWith(name.ToLower())).ToList();
+        if (results.Count == 0)
+        {
+            return NotFound("No cocktails found");
+        }
+
+        return Ok(results);
+    }
 }
