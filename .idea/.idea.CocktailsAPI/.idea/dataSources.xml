@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="diycocktailsdb@ep-ancient-morning-56523204.eu-central-1.aws.neon.fl0.io" uuid="d7681418-29a6-4d97-8ddf-4c4e376a89f7">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ep-ancient-morning-56523204.eu-central-1.aws.neon.fl0.io:5432/diycocktailsdb</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
+</project>
